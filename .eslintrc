@@ -1,0 +1,72 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaVersion": 2022,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
+	},
+
+	"ignorePatterns": ["/out"],
+	"plugins": [
+		"@typescript-eslint",
+		"prettier",
+		"unicorn",
+
+        "json",
+        "json-format",
+		"promise"
+	],
+
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:prettier/recommended",
+		"plugin:unicorn/recommended",
+        "plugin:json/recommended",
+        "plugin:promise/recommended"
+	],
+
+	"rules": {
+		"prettier/prettier": [
+			"warn",
+			{
+				"semi": true,
+				"trailingComma": "all",
+				"singleQuote": false,
+				"printWidth": 120,
+				"tabWidth": 4,
+				"useTabs": true,
+				"endOfLine": "auto"
+			}
+		],
+
+		//"no-constant-condition": "off",
+		//"no-inner-declarations": "off",
+		"unicorn/no-nested-ternary": "off",
+		//"unicorn/catch-error-name": "off",
+		"unicorn/no-new-array": "off",
+		//"unicorn/prefer-node-protocol": "off",
+		//"unicorn/prefer-module": "off",
+		//"unicorn/consistent-function-scoping": "off",
+        //"unicorn/no-array-callback-reference": "off",
+		//"unicorn/no-useless-undefined": "off",
+		//"unicorn/prefer-math-trunc": "off",
+		//"unicorn/no-array-reduce": "off",
+		//"unicorn/require-array-join-separator": "off",
+		//"unicorn/empty-brace-spaces": "off",
+		//"unicorn/no-unreadable-array-destructuring": "off",
+		"unicorn/number-literal-case": "off",
+		//"unicorn/numeric-separators-style": "off",
+		//"unicorn/no-array-method-this-argument": "off",
+		//"unicorn/prefer-spread": "off",
+		//"unicorn/no-array-for-each": "off",
+		"unicorn/switch-case-braces": "off",
+	    //"unicorn/prefer-array-some": "off"
+	},
+
+    "settings": {
+        "json/sort-package-json": "standard",
+        "json/ignore-files": ["**/package-lock.json"],
+        "json/json-with-comments-files": ["**/tsconfig.json", ".vscode/**"]
+    }
+}
